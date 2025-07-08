@@ -1,0 +1,53 @@
+
+/* Barra de navegación */
+nav.navbar {
+  background-color: #212529;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+}
+
+nav.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+nav.navbar a:hover {
+  text-decoration: underline;
+}
+
+nav.navbar .nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Contenedor principal */
+.app-container {
+  display: flex;
+  height: calc(100vh - 68px); /* altura total menos navbar */
+  padding: 1rem 2rem;
+  gap: 2rem;
+  box-sizing: border-box;
+}
+
+/* Sección de películas */
+.peliculas-section {
+  flex: 2;
+  border-right: 1px solid #ddd;
+  padding-right: 1.5rem;
+  overflow-y: auto;
+}
+
+/* Sección de carrito */
+.carrito-section {
+  flex: 1;
+  padding-left: 1.5rem;
+  background-color: #f8f9fa;
+  overflow-y: auto;
+}

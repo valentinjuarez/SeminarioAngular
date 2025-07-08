@@ -1,0 +1,23 @@
+<div class="row gy-4">
+  <div class="col-md-6 col-lg-4" *ngFor="let pelicula of peliculas">
+    <div class="card h-100 shadow-sm">
+      <img [src]="pelicula.imagen" class="card-img-top img-fluid" alt="{{pelicula.titulo}}" 
+           style="height: 300px; object-fit: cover;">
+
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title text-truncate" title="{{pelicula.titulo}}">{{ pelicula.titulo }}</h5>
+        <p class="card-text mb-1"><strong>Género:</strong> {{ pelicula.genero }}</p>
+        <p class="card-text mb-1"><strong>Año:</strong> {{ pelicula.anio }}</p>
+        <p class="card-text mb-1"><strong>Precio:</strong> ${{ pelicula.precio }}</p>
+        <p class="card-text mb-3"><strong>Stock:</strong> {{ pelicula.stock }}</p>
+
+        <button 
+          class="btn btn-primary mt-auto"
+          [disabled]="pelicula.stock === 0"
+          (click)="agregarAlCarrito(pelicula)">
+          {{ pelicula.stock === 0 ? 'Sin stock' : 'Agregar al carrito' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
